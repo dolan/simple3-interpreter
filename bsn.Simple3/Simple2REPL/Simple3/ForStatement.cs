@@ -15,8 +15,7 @@ namespace SimpleREPL.Simple3{
         private readonly Statement _step;
         private readonly Sequence<Statement> _body;
 
-        [Rule(@"<Statement> ::= for '(' <Statement> ';' <Expression> ';' <Statement> ')' do <Statements> end",
-            ConstructorParameterMapping = new[] {2, 4, 6, 9})]
+        [Rule(@"<Statement> ::= ~for ~'(' <Statement> ~';' <Expression> ~';' <Statement> ~')' ~do <Statements> ~end")]
         public ForStatement(Statement initializer, Expression test, Statement step, Sequence<Statement> body){
             _initializer = initializer;
             _test = test;

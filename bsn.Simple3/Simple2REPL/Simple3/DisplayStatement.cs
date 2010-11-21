@@ -13,12 +13,12 @@ namespace SimpleREPL.Simple3{
         private readonly Identifier _identToRead;
 
 
-        [Rule(@"<Statement> ::= print <Expression>", ConstructorParameterMapping = new[] {1})]
+        [Rule(@"<Statement> ::= ~print <Expression>")]
         public DisplayStatement(Expression expr)
             : this(expr, null){
         }
 
-        [Rule(@"<Statement> ::= print <Expression> read Id", ConstructorParameterMapping = new[] {1, 3})]
+        [Rule(@"<Statement> ::= ~print <Expression> ~read Id")]
         public DisplayStatement(Expression expr, Identifier identToRead){
             _expr = expr;
             _identToRead = identToRead;

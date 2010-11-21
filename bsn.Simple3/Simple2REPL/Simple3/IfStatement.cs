@@ -14,13 +14,12 @@ namespace SimpleREPL.Simple3{
         private readonly Expression _test;
         private readonly Sequence<Statement> _trueStatements;
 
-        [Rule(@"<Statement> ::= if <Expression> then <Statements> end", ConstructorParameterMapping = new[] {1, 3})]
+        [Rule(@"<Statement> ::= ~if <Expression> ~then <Statements> ~end")]
         public IfStatement(Expression _test, Sequence<Statement> trueStatements)
             : this(_test, trueStatements, null){
         }
 
-        [Rule(@"<Statement> ::= if <Expression> then <Statements> else <Statements> end",
-            ConstructorParameterMapping = new[] {1, 3, 5})]
+        [Rule(@"<Statement> ::= ~if <Expression> ~then <Statements> ~else <Statements> ~end")]
         public IfStatement(Expression test, Sequence<Statement> trueStatements, Sequence<Statement> falseStatements){
             _test = test;
             _trueStatements = trueStatements;

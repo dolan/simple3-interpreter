@@ -15,8 +15,7 @@ namespace SimpleREPL.Simple3{
         private readonly Sequence<Statement> _body;
         private readonly List<string> _paramNames;
 
-        [Rule(@"<Statement> ::= function Id '(' <OptionalParamList> ')' begin <Statements> end",
-            ConstructorParameterMapping = new[] {1, 3, 6})]
+        [Rule(@"<Statement> ::= ~function Id ~'(' <OptionalParamList> ~')' ~begin <Statements> ~end")]
         public FunctionDefStatement(Identifier id, Optional<Sequence<Identifier>> paramList, Sequence<Statement> body){
             _name = id._idName;
             IEnumerable<Identifier> parameters = paramList.Value.ToArray() ?? new Identifier[0];

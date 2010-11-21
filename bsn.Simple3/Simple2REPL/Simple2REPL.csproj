@@ -120,18 +120,17 @@
     <Compile Include="UndefinedVariableException.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bsn.GoldParser\bsn.GoldParser.csproj">
-      <Project>{1A1A5AE9-7981-471C-9CC7-F7465E675A32}</Project>
-      <Name>bsn.GoldParser</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Simple2\Simple2.cgt" />
     <None Include="Simple2\Simple2.grm" />
     <EmbeddedResource Include="Simple3\Simple3.cgt" />
     <None Include="Simple3\Simple3.grm" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\bsn.GoldParserLatest\bsn.GoldParser\bsn.GoldParser.csproj">
+      <Project>{1A1A5AE9-7981-471C-9CC7-F7465E675A32}</Project>
+      <Name>bsn.GoldParser</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -13,7 +13,7 @@ namespace SimpleREPL.Simple3{
         private readonly Expression _test;
         private readonly Sequence<Statement> _trueStatements;
 
-        [Rule(@"<Statement> ::= while <Expression> do <Statements> end", ConstructorParameterMapping = new[] {1, 3})]
+        [Rule(@"<Statement> ::= ~while <Expression> ~do <Statements> ~end")]
         public WhileStatement(Expression test, Sequence<Statement> trueStatements){
             _test = test;
             _trueStatements = trueStatements;

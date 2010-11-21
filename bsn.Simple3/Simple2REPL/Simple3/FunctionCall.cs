@@ -13,7 +13,7 @@ namespace SimpleREPL.Simple3{
         private readonly Identifier _id;
         private readonly Expression[] _arguments;
 
-        [Rule(@"<Value> ::= Id '(' <OptionalArgumentList> ')'", ConstructorParameterMapping = new[] {0, 2})]
+        [Rule(@"<Value> ::= Id ~'(' <OptionalArgumentList> ~')'")]
         public FunctionCall(Identifier id, Optional<Sequence<Expression>> args){
             _id = id;
             _arguments = args.Value.ToArray() ?? new Expression[0];
@@ -21,7 +21,7 @@ namespace SimpleREPL.Simple3{
 
 
         public override object GetValue(Simple3ExecutionContext ctx){
-            FunctionDefinition def = ctx.GetFunctionDefinition(_id._idName);
+            var def = ctx.GetFunctionDefinition(_id._idName);
 
             using (var smallContext = new Simple3ExecutionContext(ctx)){
                 smallContext.AllocateParameters(def);

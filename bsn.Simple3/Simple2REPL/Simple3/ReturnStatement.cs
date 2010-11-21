@@ -11,7 +11,7 @@ namespace SimpleREPL.Simple3{
     public class ReturnStatement : Statement{
         private readonly Expression _toReturn;
 
-        [Rule(@"<Statement> ::= return <Expression>", ConstructorParameterMapping = new[] {1})]
+        [Rule(@"<Statement> ::= ~return <Expression>")]
         public ReturnStatement(Expression toReturn){
             _toReturn = toReturn;
         }

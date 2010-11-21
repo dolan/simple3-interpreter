@@ -12,7 +12,7 @@ namespace SimpleREPL.Simple3{
         private readonly Expression _expr;
         private readonly Identifier _receiver;
 
-        [Rule(@"<Statement> ::= Id '=' <Expression>", ConstructorParameterMapping = new[] {0, 2})]
+        [Rule(@"<Statement> ::= Id ~'=' <Expression>")]
         public AssignStatement(Identifier receiver, Expression expr){
             _receiver = receiver;
             _expr = expr;

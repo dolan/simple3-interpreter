@@ -26,11 +26,9 @@ namespace SimpleREPL.Simple3{
             : this(item, null){
         }
 
-        [Rule(@"<ParamList> ::= Id ',' <ParamList>", typeof (Identifier), ConstructorParameterMapping = new[] {0, 2})]
-        [Rule(@"<ArgumentList> ::= <Expression> ',' <ArgumentList>", typeof (Expression),
-            ConstructorParameterMapping = new[] {0, 2})]
-        [Rule(@"<Statements> ::= <DelimitedStatement> <Statements>", typeof (Statement),
-            ConstructorParameterMapping = new[] {0, 1})]
+        [Rule(@"<ParamList> ::= Id ~',' <ParamList>", typeof (Identifier))]
+        [Rule(@"<ArgumentList> ::= <Expression> ~',' <ArgumentList>", typeof (Expression))]
+        [Rule(@"<Statements> ::= <DelimitedStatement> <Statements>", typeof (Statement))]
         public Sequence(T item, Sequence<T> next){
             this.item = item;
             this.next = next;
