@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45B82282-CF5E-49EF-BDD0-B8C5CCB23649}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleREPL</RootNamespace>
+    <AssemblyName>SimpleREPL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IRun.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplFactory.cs" />
+    <Compile Include="Simple2\AndOperator.cs" />
+    <Compile Include="Simple2\AssignStatement.cs" />
+    <Compile Include="Simple2\BinaryOperation.cs" />
+    <Compile Include="Simple2\BinaryOperator.cs" />
+    <Compile Include="Simple2\DisplayStatement.cs" />
+    <Compile Include="Simple2\DivideOperator.cs" />
+    <Compile Include="Simple2\EqualEqualOperator.cs" />
+    <Compile Include="Simple2\Expression.cs" />
+    <Compile Include="Simple2\GTEOperator.cs" />
+    <Compile Include="Simple2\GTOperator.cs" />
+    <Compile Include="Simple2\Identifier.cs" />
+    <Compile Include="Simple2\IfStatement.cs" />
+    <Compile Include="Simple2\KeywordToken.cs" />
+    <Compile Include="Simple2\LTEOperator.cs" />
+    <Compile Include="Simple2\LTOperator.cs" />
+    <Compile Include="Simple2\MinusOperator.cs" />
+    <Compile Include="Simple2\MultOperator.cs" />
+    <Compile Include="Simple2\Negate.cs" />
+    <Compile Include="Simple2\NotEqualOperator.cs" />
+    <Compile Include="Simple2\NumberLiteral.cs" />
+    <Compile Include="Simple2\PlusOperator.cs" />
+    <Compile Include="Simple2\REPLCator.cs" />
+    <Compile Include="Simple2\Sequence.cs" />
+    <Compile Include="Simple2\Simple2Token.cs" />
+    <Compile Include="Simple2\SimpleExecutionContext.cs" />
+    <Compile Include="Simple2\Statement.cs" />
+    <Compile Include="Simple2\StringLiteral.cs" />
+    <Compile Include="Simple2\TypeChecker.cs" />
+    <Compile Include="Simple2\WhileStatement.cs" />
+    <Compile Include="Simple3\AndOperator.cs" />
+    <Compile Include="Simple3\AssignStatement.cs" />
+    <Compile Include="Simple3\BinaryOperation.cs" />
+    <Compile Include="Simple3\BinaryOperator.cs" />
+    <Compile Include="Simple3\DisplayStatement.cs" />
+    <Compile Include="Simple3\DivideOperator.cs" />
+    <Compile Include="Simple3\EqualEqualOperator.cs" />
+    <Compile Include="Simple3\Expression.cs" />
+    <Compile Include="Simple3\ForStatement.cs" />
+    <Compile Include="Simple3\FunctionCall.cs" />
+    <Compile Include="Simple3\FunctionDefinition.cs" />
+    <Compile Include="Simple3\FunctionDefStatement.cs" />
+    <Compile Include="Simple3\GTEOperator.cs" />
+    <Compile Include="Simple3\GTOperator.cs" />
+    <Compile Include="Simple3\Identifier.cs" />
+    <Compile Include="Simple3\IfStatement.cs" />
+    <Compile Include="Simple3\KeywordToken.cs" />
+    <Compile Include="Simple3\LoopWhileStatement.cs" />
+    <Compile Include="Simple3\LTEOperator.cs" />
+    <Compile Include="Simple3\LTOperator.cs" />
+    <Compile Include="Simple3\MinusOperator.cs" />
+    <Compile Include="Simple3\MultOperator.cs" />
+    <Compile Include="Simple3\Negate.cs" />
+    <Compile Include="Simple3\NotEqualOperator.cs" />
+    <Compile Include="Simple3\NumberLiteral.cs" />
+    <Compile Include="Simple3\Optional.cs" />
+    <Compile Include="Simple3\PlusOperator.cs" />
+    <Compile Include="Simple3\REPLCator3.cs" />
+    <Compile Include="Simple3\ReturnStatement.cs" />
+    <Compile Include="Simple3\Sequence.cs" />
+    <Compile Include="Simple3\Simple3Token.cs" />
+    <Compile Include="Simple3\Simple3ExecutionContext.cs" />
+    <Compile Include="Simple3\Statement.cs" />
+    <Compile Include="Simple3\StatementBlock.cs" />
+    <Compile Include="Simple3\StringLiteral.cs" />
+    <Compile Include="Simple3\TypeChecker.cs" />
+    <Compile Include="Simple3\TypeMismatchException.cs" />
+    <Compile Include="Simple3\WhileStatement.cs" />
+    <Compile Include="SimpleRuntimeException.cs" />
+    <Compile Include="UndefinedVariableException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bsn.GoldParser\bsn.GoldParser.csproj">
+      <Project>{1A1A5AE9-7981-471C-9CC7-F7465E675A32}</Project>
+      <Name>bsn.GoldParser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Simple2\Simple2.cgt" />
+    <None Include="Simple2\Simple2.grm" />
+    <EmbeddedResource Include="Simple3\Simple3.cgt" />
+    <None Include="Simple3\Simple3.grm" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
