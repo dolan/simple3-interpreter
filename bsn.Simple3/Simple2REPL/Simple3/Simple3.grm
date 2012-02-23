@@ -20,10 +20,10 @@ StringLiteral = ''   {String Ch 1}* ''
 NumberLiteral = {Digit}+('.'{Digit}+)?
 
 
-<Statements> ::= <StatementOrBlock> <Statements>
-               | <StatementOrBlock> 
+<Statements> ::= <DelimitedStatement> <Statements>
+               | <DelimitedStatement> 
 
-<StatementOrBlock> ::= <Statement>
+<DelimitedStatement> ::= <Statement>
                        | begin <Statements> end 
 
 <Statement>  ::= print <Expression> 

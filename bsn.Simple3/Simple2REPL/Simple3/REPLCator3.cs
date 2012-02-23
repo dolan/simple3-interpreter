@@ -52,7 +52,8 @@ namespace SimpleREPL.Simple3{
                         }
                         continue;
                     }
-                    else if (input.ToLower().Trim() == "exit"){
+                    
+                    if (input.ToLower().Trim() == "exit"){
                         ctx.OutputStream.WriteLine("Exiting...");
                         return;
                     }
